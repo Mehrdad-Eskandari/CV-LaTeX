@@ -1,0 +1,143 @@
+% !TEX TS-program = LuaLaTeX
+%
+% This template has been modified by:
+% Mehrdad Eskandari, me.eskandarii@gmail.com
+
+\documentclass[a4paper]{article}
+
+%----- Packages
+\usepackage{fontspec}
+\usepackage{url,parskip}
+\usepackage[usenames,dvipsnames]{xcolor}
+\usepackage{geometry}
+\usepackage{fontawesome}
+\usepackage{hyperref}
+\usepackage{titlesec}
+\usepackage{array}
+\usepackage{enumitem}
+\usepackage{tikz}
+\usepackage{academicons}
+
+%----- Fonts and colors
+\setmainfont[
+    Path = fonts/, 
+    BoldFont = SourceSansPro-Semibold, 
+    ItalicFont = SourceSansPro-LightIt, 
+    SmallCapsFont = SourceSansPro-Regular]{SourceSansPro-Light}
+\definecolor{basecolor}{HTML}{000066}
+\definecolor{darkGrey}{HTML}{989898}
+\colorlet{linkcolor}{basecolor}
+\colorlet{accentcolor}{linkcolor!90}
+\colorlet{symbolcolor}{linkcolor!85}
+
+%----- Defined commands
+\newcommand{\Skill}[1]{{\footnotesize{\foreach \n in {#1}{\cvtag{\n}}}}}
+\newcommand{\link}[2]{\color{linkcolor}\href{#1}{#2}\color{Black} }
+\newcommand{\socialtext}[2]{\mbox{\textcolor{symbolcolor}{#1}\hspace{0.5em}#2\hspace{1em}}}
+\newcommand{\sociallink}[3]{\mbox{\textcolor{symbolcolor}{#1}\hspace{0.5em}\link{#2}{#3}\hspace{1em}}}
+\newcommand{\sectionTitle}[2]{\section{\texorpdfstring{\color{accentcolor}#2\enspace #1}{#1}}}
+\newcommand{\cvtag}[1]{
+	\begin{tikzpicture}
+		\node[anchor=base,draw=darkGrey!70,rounded corners=0.5ex,inner xsep=1ex,inner ysep =0.55ex,text height=1.3ex,text depth=.25ex]{#1};
+	\end{tikzpicture}	  
+	}
+
+%----- Settings ad styles	
+\hypersetup{hidelinks}
+\hyphenpenalty = 10000
+\hypersetup{breaklinks}
+\pagestyle{empty} 
+\setlist[itemize,1]{label=\faAngleRight, nosep, leftmargin=2em} 
+\titleformat{\section}{\Large\raggedright}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{2pt}{2pt}
+\geometry{left=11mm, right=11 mm, top=15mm, bottom=15 mm}
+
+
+
+\begin{document}
+\begin{tabular}{@{}b{14cm}  l }
+{\color{accentcolor}{\LARGE Mehrdad \textbf{Eskandari}}, \Large Senior Data Scientist} &
+{\sociallink{}{https://www.linkedin.com/in/mehrdad-eskandari-a83ab0242}{\faLinkedinSquare}} 
+{\sociallink{}{https://github.com/Mehrdad-Eskandari}{\faGithub}}
+{\sociallink{}{https://scholar.google.com/citations?user=JJ1hrLsAAAAJ&hl=en}{\aiGoogleScholar}}
+{\sociallink{}{mailto:me.eskandarii@gmail.com}{\faEnvelope}}
+{\sociallink{}{https://wa.me/989125273505}{\faWhatsapp}}
+\end{tabular}\\
+%
+\sectionTitle{Core Competencies}{\faFlask}
+\begin{itemize}
+\item Strong Machine Learning and Deep Learning skills
+\item Experienced in end-to-end Python programming for data driven systematic designs, analyzing large datasets, and building state-of-the-art models in Keras, TensorFlow, and Scikit-learn to improve upon traditional solutions.
+\item  Solid backgrounds in Analytical and Numerical Optimization, published 12 articles in high-impact computational science journals.
+\end{itemize}
+
+\sectionTitle{Experience}{\faSuitcase}
+
+\begin{tabular}{@{}p{14cm} l}
+\textbf{Paya Sanat Holding, Senior Data Scientist} & Feb. 2017 - present
+\end{tabular}\\
+Analyzing data of 13 subsidiary companies in a mega-scale manufacturing holding.
+Notable projects:
+\begin{itemize}
+\item 12\% increase in glass bottle production by analyzing thousands of daily data (including the amount of each substance in the input batch, temperature of different zones, timing and pressure of each section of the IS machine, and rejection codes of image processing-based QC machine) transmitted by sensors, diagnosing problems, and optimizing the settings to reduce losses.
+\item 20\% reduction in capital sedimentation of raw materials in a textile company by analyzing the gathered data from the production line (including the consumption rate of each yarn, stop time of each machine, patterns under production, and next week's plan), sales data, and warehouse inventory.
+\item 10\% increase in tile production by analyzing thousands of daily data (including the average granule size, pressure of the press machine, time and temperature of each zone, cooling rates, and rejection codes of the product) received from real-time sensors, diagnosing problems, and finding optimal setting.
+\item Developing Python codes to estimate the final product costs in glass, textile, tile, and rubber production companies. 
+\end{itemize}
+\Skill{Python}\Skill{Data analysis}\Skill{Linear Regression} \Skill{Logistic Regression} \Skill{MySQL}\Skill{Power BI}
+
+\begin{tabular}{@{}p{14cm} l}
+\textbf{Freelance Data scientist} & Feb. 2018 - present
+\end{tabular}\\
+Performed numerous projects in the field of data science, machine learning, and statistical analysis. notable projects:
+\begin{itemize}
+\item Performed hierarchical time series analysis by forecasting 28 days ahead of the unit sold products in Walmart.
+\item Built CNN with input pipeline having preprocessing operations and data augmentation for large image classification.
+\item Implemented Natural Language Processing case-based reasoning by vector space model and semantic query expansion.
+\item Performed Exploratory Data Analysis of rental bike dataset in CA (occurrence over time and location). Compared
+and visualized results of dimensionality reduction algorithms (PCA, LLE and MDS).
+\item Trained deep neural network on CIFAR10 images. Analyzed Batch Normalization, Initialization and Drop-outs.
+\item Trained RNN with LSTM on Bach chorales dataset (note vs time) and used the model to generate Bach-like music.
+\item Implemented sentiment analysis and visualization of tech stock news using NLTK.
+\item Automated Valuation Model of real estate properties via Stacked Generalization and Comparable Market Analysis.
+\item Developed a standard dataset based on thermal far-infrared photos taken by drones and coupled light convolutional
+neural networks with handcrafted features to identify possible sinkholes.
+\end{itemize}
+\Skill{Python}\Skill{R}\Skill{Supervised Learning Algorithms}\Skill{NLP}\Skill{SVM}\Skill{Hierarchical Clustering}\Skill{PCA}\Skill{ANN}\Skill{CNN}\Skill{RNN}\Skill{Power BI}\Skill{MySQL}\Skill{TensorFlow \& Keras}
+
+
+\begin{tabular}{@{}p{14cm} l}
+\textbf{Tehran Raymand, Senior rotating equipment and Fired-Package engineer} & Sep. 2014 - Feb. 2017
+\end{tabular}\\
+Simulating rotating equipment and fired packages such as pumps, flares, heat exchangers, and combustion chambers in the oil and gas industry\\
+\Skill{Numerical simulation}\Skill{CFD}\Skill{Combustion}\Skill{Oil \& gas}\Skill{API}\Skill{Rotating equipment}
+
+\begin{tabular}{@{}p{14cm} l}
+\textbf{Jahan Pars, Rotating equipment and Fired-Package engineer} & Sep. 2010 - Sep. 2014
+\end{tabular}\\
+Preparing engineering documents for rotating equipment and fired packages, including pumps, compressors, blowers, gas turbines, boilers, and flares in the oil and gas industry. \\
+\Skill{Oil \& gas}\Skill{American Petroleum Institute (API)}\Skill{Rotating equipment}
+
+\sectionTitle{Education}{\faUniversity}
+\begin{tabular}{p{14cm} l}
+Ph.D. in  Mechanical Engineering, Amirkabir University o Technology, Tehran, Iran. & 2017\\
+M.Sc. in  Mechanical Engineering, Amirkabir University o Technology, Tehran, Iran. & 2010\\
+B.Sc. in  Mechanical Engineering, Amirkabir University o Technology, Tehran, Iran. & 2007\\
+\end{tabular}
+
+\sectionTitle{Skills}{\faTasks}
+\textbf{Programming:}  Python, R, C++, MATLAB, MySQL\\
+\textbf{Machine learning Algorithms:} Linear Regression, Logistic Regression, KNN, Decision Trees, Random Forests, SVM, Naïve Bayes Classifier, NLP, K-Means Clustering, DBSCAN, PCA, ANN, CNN, RNN\\
+\textbf{Machine learning skills:} Power BI, Scikit-learn, TensorFlow \& Keras
+
+\sectionTitle{Languages}{\faLanguage}
+\begin{tabular}{*4{p{40mm}}}
+English (Fluent) &
+German (Intermediate) &
+Turkish (Native) &
+Persian (Native)
+\end{tabular}
+
+
+%(last update: \today)
+\end{document}
